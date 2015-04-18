@@ -11,9 +11,9 @@ Float solarMass = 4 * pi * pi;
 Float daysPerYear = 365.24;
 Float sqrt(Float f) => f^0.5;
 
-shared class Body(shared variable Float x, shared variable Float y, shared variable Float z,
+shared abstract class Body(shared variable Float x, shared variable Float y, shared variable Float z,
     shared variable Float vx, shared variable Float vy, shared variable Float vz,
-    shared Float mass) {
+    shared Float mass) of sun|jupiter|saturn|uranus|neptune {
     
     shared Body offsetMomentum(Float px, Float py, Float pz) {
         vx = -px / solarMass;
@@ -131,4 +131,5 @@ shared class NBodySystem() {
         }
         return e;
     }
+    
 }
