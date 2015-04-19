@@ -51,7 +51,7 @@ shared BodyProperties propertiesOf(Body body) {
     case (neptune) { return neptuneProperties.get; }
 }
 
-shared class BodyDrawer(dynamic context, dynamic offsetX, dynamic offsetY) {
+shared class BodyDrawer(Context context, Float offsetX, Float offsetY) {
     
      value scale = 4.0;
     
@@ -60,7 +60,7 @@ shared class BodyDrawer(dynamic context, dynamic offsetX, dynamic offsetY) {
         dynamic {
             context.fillStyle = properties.color;
             context.beginPath();
-            context.arc((body.x * scale) + offsetX, (body.y * scale) + offsetY, 5, 0, 2*pi);
+            context.arc((body.x * scale) + offsetX, (body.y * scale) + offsetY, 5.0, 0.0, 2*pi);
             context.fill();
         }
     }
