@@ -51,7 +51,7 @@ shared BodyProperties propertiesOf(Body body) {
     case (neptune) { return neptuneProperties.get; }
 }
 
-shared class BodyDrawer(Context context, Float offsetX, Float offsetY) {
+shared class BodyDrawer(CanvasRenderingContext2D context, Float offsetX, Float offsetY) {
     
      value scale = 4.0;
     
