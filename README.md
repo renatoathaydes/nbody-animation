@@ -1,4 +1,8 @@
 ## CeylonJS Animation of a N-body system
 
-To run, simply compile the Ceylon code to JS using `ceylon compile-js` (or just import the project into the IDE and it will do that automatically) and open `index.html` in your favourite browser.
+To run the nbody animation in a browser:
+
+* ceylon compile-js --out=build com.athaydes.nbody
+* ceylon copy --rep=build --with-dependencies --js com.athaydes.nbody
+* open index.html # open index.html in your browser
 
