@@ -5,19 +5,13 @@
         <meta http-equiv="Content-type" 
               content="text/html;charset=UTF-8"/>
         <title>NBody System Animation</title>
-        <script type="text/javascript"
-                src="script/require/2.1.14/require.js">
+        <!-- <script src="http://requirejs.org/docs/release/2.1.22/minified/require.js"></script> -->
+        <script src="script/require/2.1.22/minified/require.js"></script>
         </script>
         <script type="text/javascript">
             require.config({
                 // location of our project's compiled modules
-                baseUrl: 'modules',
-                // locations of external dependencies here
-                paths: {
-                    // path to the Ceylon language module 
-                    'ceylon/language': 
-                        '../script/ceylon/language'
-                }
+                baseUrl: 'modules'
             });
             //alias our module to 'app'
             require(['com/athaydes/nbody/1.0.0/com.athaydes.nbody-1.0.0'], 
